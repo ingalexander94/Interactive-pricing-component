@@ -17,15 +17,15 @@
 
   const getPageviews = (price) => {
     switch (price) {
-      case 8:
+      case 1:
         return "10K";
-      case 12:
+      case 2:
         return "50K";
-      case 16:
+      case 3:
         return "100K";
-      case 24:
+      case 4:
         return "500K";
-      case 36:
+      case 5:
         return "1M";
       default:
         return state.pageviews;
@@ -53,7 +53,7 @@
     setState({
       ...state,
       price,
-      pageviews: getPageviews(value),
+      pageviews: getPageviews(parseInt(value)),
     });
   });
 
